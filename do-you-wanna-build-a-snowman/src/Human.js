@@ -10,14 +10,20 @@ class Human {
       buttons: 0,
       carrots: 0
     }
-    gatherMaterials(material, number) {
-      this.materials[material] = this.materials[material] + number;
-    }
-
-    buildASnowman() {
-//create new instance of Snowman class
-      var snowman = new Snowman(this.materials)
-      return snowman;
+    this.snowman = null;
+  }
+  gatherMaterials(material, number) {
+    this.materials[material] = this.materials[material] + number;
+  }
+  buildASnowman() {
+    this.snowman = new Snowman(this.materials)
+    return this.snowman;
+  }
+  placeMagicHat() {
+    if (this.snowman.magicHat === true) {
+      return "Woah, this snowman is coming to life!"
+    } else {
+      return "I guess I didn't build it correctly."
     }
   }
 }

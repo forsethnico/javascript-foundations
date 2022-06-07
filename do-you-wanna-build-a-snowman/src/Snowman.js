@@ -11,7 +11,6 @@ class Snowman {
       this.magicHat = true;
     }
   }
-
 }
 
 module.exports = Snowman;
