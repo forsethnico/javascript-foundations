@@ -8,7 +8,7 @@ class Human {
     this.snowman = null;
   }
   gatherMaterials(material, amount) {
-    this.materials[material] = this.materials[material] + amount
+    this.materials[material] += amount
   }
   buildASnowman() {
     this.snowman = new Snowman(this.materials)
